@@ -45,17 +45,17 @@ app.post('/upload', upload.any(), (req, res) => {
   console.log(`Image uploaded: ${imageUrl}`);
 
   // Generate image data object (replace with your data structure)
-//   const imageData = {
-//     name: imageName,
-//     url: imageUrl
-//   };
+  const imageData = {
+    name: imageName,
+    url: imageUrl
+  };
 
   // Emit 'new-image' event with image data to connected clients
 //   io.emit('new-image', imageData);
 
   res.status(200).send({
     message:'Image uploaded successfully',
-    imageUrl
+    imageData
 });
 });
 

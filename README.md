@@ -1,4 +1,4 @@
 # image-gallery-node-server
 To run this server, follow these steps
 - `npm install`
-- `node server-es.js`
+- `node server-es.mjs`

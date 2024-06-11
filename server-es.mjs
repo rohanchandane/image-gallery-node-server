@@ -57,9 +57,7 @@ app.get('/images', async (req, res) => {
   const limit = parseInt(req.query.limit) || 10;
   const skip = parseInt(req.query.skip) || 0;
 
-  const files = await fs.promises.readdir(imageUploadPath);
-
-  const images = files.filter((file) => !file.startsWith('.'));
+  const images = await fs.promises.readdir(imageUploadPath);
 
   const paginatedImages = images.slice(skip, skip + limit);
 
